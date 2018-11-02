@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todoApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AngularJS Lab 1</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+
+<body>
+    <section class="container" ng-controller="TodoController as $ctrl">
+        <form>
+            <h1>TODO List</h1>
+            <p>A place to store the things you have to do!</p>
+            <input class="filterbtn" type="text" placeholder="Filter your to-dos">
+
+            <section class="list">
+                <ol>
+                    <li ng-repeat="chore in $ctrl.list track by $index" 
+                    ng-class="{'completed': chore.completed === true}">
+
+                        <button class="completebtn" ng-if="chore.completed === false">Complete</button>
+                        <p> {{ chore.task }}</p>
+                        <p class="x"> X </p>
+                    </li>
+                </ol>
+            </section>
+    
+
+            <input class="addtodo" type="text" placeholder="Add your to do">
+            <button class="addbtn">Add</button>
+            </form>
+    </section>
+
+
+    <script src="https://code.angularjs.org/1.6.5/angular.js"></script>
+    <script src="module.js"></script>
+    <script src="controller.js"></script>
+</body>
+
+</html>

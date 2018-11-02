@@ -1,0 +1,71 @@
+body {
+    height: 100vh;
+    display: flex; 
+    justify-content: center;
+    background:  linear-gradient(to right, #f857a6, #ff5858); 
+}
+html {
+    font-family: 'Open Sans', sans-serif;
+}
+
+section {
+    width: 50%;
+}
+
+form {
+    display: flex; 
+    flex-direction: column; 
+    align-items: left; 
+    padding: 20px;
+    border-radius: 15px;  
+    border: 1px solid black;
+    margin-top: 10%; 
+    margin-bottom: 20%;  
+    Box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    background-color: white;
+    position: relative;
+
+}
+
+.x {
+    position: absolute; 
+    right: 55px; 
+}
+
+.completebtn {
+    background-color: white; 
+    color: #ff1493; 
+    border-radius: 10px;
+    border: 1px solid #ff1493; 
+    padding: 8px; 
+    width: 80px;
+}
+p {
+    display: inline; 
+}
+
+.list {
+    width: 90%;
+}
+
+li {
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+}
+
+.filterbtn,.addtodo {
+    border-radius: 5px; 
+    padding: 8px; 
+    color: #eee; 
+    margin: 5px; 
+    border: 1px solid #eee; 
+    background-color: white;
+}
+
+.addbtn {
+    background-color: #ff69b4; 
+    padding: 10px; 
+    margin: 10px; 
+    color: white; 
+    border-radius: 10px; 
+}
