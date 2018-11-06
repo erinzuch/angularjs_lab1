@@ -10,12 +10,24 @@ function TodoController() {
     ];
     console.log(vm.list); 
 
+    vm.addTask = (newItem) => {
+        vm.list.push({task: newItem, completed: false});
+        // console.log(newItem);
+    };
+    vm.removeTask = (index) => {
+        vm.list.splice(index, 1); 
+    };
+    vm.completeTask = (chore) => {
+        console.log(chore);
+        chore.completed = !chore.completed; 
+    };
     
 }
 
 
 
 angular
-    .module("todoApp")
+// Defining a controller
+    .module("todoApp") // getter syntax, use for retrieving pieces of info
     .controller("TodoController", TodoController); 
 
